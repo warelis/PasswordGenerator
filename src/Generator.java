@@ -7,7 +7,7 @@ public class Generator extends Alphabet{
     PasswordData passwordData = new PasswordData();
     public void creatingPassword(){
         for(int i = 0; i < password.length; i++){
-            int choice = passwordData.getPasswordSymbols(i % 4);
+            int choice = passwordData.getPasswordSymbols(rand.nextInt(4));
         switch (choice) {
             case 0:
                 password[i] = lettersLowerCase[rand.nextInt(lettersLowerCase.length)];
