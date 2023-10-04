@@ -5,11 +5,8 @@ public class Generator extends Alphabet{
     public char[] password = new char[10];
     Random rand = new Random();
 //    PasswordData passwordData = new PasswordData();
-    PasswordData passwordData;
-    public Generator(PasswordData passwordData){
-        this.passwordData = passwordData;
-    }
-    public void creatingPassword(){
+
+    public void creatingPassword(PasswordData passwordData){
         for(int i = 0; i < password.length; i++){
             int choice = passwordData.getPasswordSymbols(rand.nextInt(4));
         switch (choice) {

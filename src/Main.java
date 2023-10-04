@@ -11,8 +11,8 @@ public class Main {
             System.out.print(x);
         }
         System.out.println();
-        Generator generator = new Generator(data);
-        generator.creatingPassword();
+        Generator generator = new Generator();
+        generator.creatingPassword(data);
 //        for(char x : generator.password){
 //            System.out.print(x);
 //        }
