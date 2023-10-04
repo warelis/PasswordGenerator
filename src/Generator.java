@@ -4,7 +4,11 @@ import java.util.Scanner;
 public class Generator extends Alphabet{
     public char[] password = new char[10];
     Random rand = new Random();
-    PasswordData passwordData = new PasswordData();
+//    PasswordData passwordData = new PasswordData();
+    PasswordData passwordData;
+    public Generator(PasswordData passwordData){
+        this.passwordData = passwordData;
+    }
     public void creatingPassword(){
         for(int i = 0; i < password.length; i++){
             int choice = passwordData.getPasswordSymbols(rand.nextInt(4));
@@ -20,6 +24,7 @@ public class Generator extends Alphabet{
                 break;
             case 3:
                 password[i] = characters[rand.nextInt(characters.length)];
+                break;
         }
         }
     }

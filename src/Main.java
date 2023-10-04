@@ -6,11 +6,12 @@ public class Main {
         PasswordData data = new PasswordData();
         data.choosingCharactersInPassword(2);
         data.choosingCharactersInPassword(1);
+        data.choosingCharactersInPassword(3);
         for(int x : data.passwordSymbols){
             System.out.print(x);
         }
         System.out.println();
-        Generator generator = new Generator();
+        Generator generator = new Generator(data);
         generator.creatingPassword();
 //        for(char x : generator.password){
 //            System.out.print(x);
