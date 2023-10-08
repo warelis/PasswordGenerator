@@ -1,7 +1,8 @@
 
 public class Main {
     public static void main(String[] args) {
-        Text text = new Text();
+        Generator generator = new Generator();
+        Text text = new Text(generator);
         text.startingText();
 
         PasswordData data = new PasswordData();
@@ -9,8 +10,7 @@ public class Main {
         data.choosingCharactersInPassword(1);
         data.choosingCharactersInPassword(3);
 
-        text.setPasswordData(data); //Here is connecting data in main with
-        // data in text class - REMEMBER how to do it
+        text.setPasswordData(data);
 
         text.chosenCharacters();
 
@@ -18,8 +18,10 @@ public class Main {
         text.passwordLength();
 
 
-        Generator generator = new Generator();
-        int passwordLength = generator.setPasswordLength(9);
+
+        generator.setMinMax(5, 15);
+        int passwordLength = generator.setPasswordLength(30);
+
         System.out.println("Length: " + passwordLength);
         generator.creatingPassword(data);
 

@@ -3,16 +3,46 @@ import java.util.Scanner;
 
 public class Generator extends Alphabet{
     int passwordLength;
+//    private Text text;
+    int min = 4;
+    int max = 9;
+    public void setMinMax(int min, int max){
+        this.min = min;
+        this.max = max;
+    }
+
+    public int getMin() {
+        return min;
+    }
+
+    public int getMax() {
+        return max;
+    }
+
+    //    public void setText(Text text){
+//        int max = 0;
+//        int min = 0;
+//        this.text = text;
+//        this.min = min;
+//        this.max = max;
+//    }
     public char[] password;
     public int setPasswordLength(int passwordLength){
-        int min = 4;
-        int max = 9;
-        if(passwordLength>=min && passwordLength<=max){
-            this.passwordLength = passwordLength;
-        }
-        else{
-            this.passwordLength = 5;
-        }
+
+        int i;
+        Scanner scan = new Scanner(System.in);
+        do{
+            i = scan.nextInt();
+            // i < lub > wiadomość. Przekazać dalej i
+        }while(i < 5 || i > 15);
+
+//        if(passwordLength >= min && passwordLength <= max){
+//            this.passwordLength = passwordLength;
+//        }
+//        else{
+//            text.outOfScope(passwordLength, min, max);
+//            //this.passwordLength = 5;
+//        }
         password = new char[passwordLength];
         return this.passwordLength;
     }
