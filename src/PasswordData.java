@@ -1,6 +1,6 @@
 public class PasswordData {
 
-    public int[] passwordSymbols = new int[4];
+    public final int[] passwordSymbols = new int[4];
 
     public int getPasswordSymbols(int index) {
         if(index >=0 && index <= passwordSymbols.length){
@@ -10,8 +10,6 @@ public class PasswordData {
             return passwordSymbols[0];
         }
     }
-
-
     public void choosingCharactersInPassword(int number) {
         switch (number) {
             case 0:
@@ -30,4 +28,5 @@ public class PasswordData {
                 break;
         }
     }
+
 }

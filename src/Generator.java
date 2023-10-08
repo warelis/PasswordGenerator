@@ -2,9 +2,22 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Generator extends Alphabet{
-    public char[] password = new char[10];
+    int passwordLength;
+    public char[] password;
+    public int setPasswordLength(int passwordLength){
+        int min = 4;
+        int max = 9;
+        if(passwordLength>=min && passwordLength<=max){
+            this.passwordLength = passwordLength;
+        }
+        else{
+            this.passwordLength = 5;
+        }
+        password = new char[passwordLength];
+        return this.passwordLength;
+    }
+
     Random rand = new Random();
-//    PasswordData passwordData = new PasswordData();
 
     public void creatingPassword(PasswordData passwordData){
         for(int i = 0; i < password.length; i++){
