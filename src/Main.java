@@ -20,7 +20,7 @@ public class Main {
 
 
         generator.setMinMax(5, 15);
-        int passwordLength = generator.setPasswordLength(30);
+        int passwordLength = generator.setPasswordLength();
 
         System.out.println("Length: " + passwordLength);
         generator.creatingPassword(data);

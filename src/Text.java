@@ -8,6 +8,9 @@ public class Text {
     public Text(Generator generator) {
         this.generator = generator;
     }
+    public Text(){
+
+    }
 
     public void startingText(){
         System.out.println("Hello, it's a password generator.");
@@ -36,15 +39,15 @@ public class Text {
     }
 
     public void passwordLength(){
-        System.out.println(("Choose a password length, the scope is between" + generator.getMin() +
+        System.out.println(("Choose a password length, the scope is between " + generator.getMin() +
                 " and " + generator.getMax()));
     }
     public void outOfScope(int passwordLength, int min, int max){
         if(passwordLength <= min){
-            System.out.println("567");
+            System.out.println("Password too short");
         }
         else if(passwordLength >= max){
-            System.out.println("123123");
+            System.out.println("Password too long");
         }
 
     }
